@@ -17,7 +17,8 @@ function App() {
         <h1>This is my application.</h1>
         <div className="cards">
 
-          {persons.map((person) => (<Card key={person.id} name={person.name} age={person.age} title={person.title} />))};
+          {persons.map((person) =>
+            (<Card key={person.id} {...person.id} />))};
         </div>
       </main >
       <footer copyright="hi" />
@@ -25,8 +26,7 @@ function App() {
   );
 }
 //make a state which has array with three people
-
-
+//name={person.name} age={person.age} title={person.title} number={person.id}
 
 
 
