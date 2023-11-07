@@ -10,69 +10,35 @@ function App() {
   { id: 2, name: 'Randy', title: 'Employee', age: 28 },
   ]);
 
-  const eventHandler = (name) => {
+  /*const eventHandler = (name) => {
     console.log(name);
+  }*/
+  const removeHandler = (id) => {
+    const updatedArray = persons.filter(person => person.id !== id)
+    setPersons(updatedArray)
   }
   return (
     <>
-      <header logo="iman haji" />
+      <header logo="IMAN HAJI" />
+      <h1>This is my application.</h1>
       <main>
-        <h1>This is my application.</h1>
         <div className="cards">
           {persons.map((person) =>
           (<Card
             key={person.id}
             {...person.id}
-            click={() => eventHandler(person.name)}
+            click={() => removeHandler(person.id)}
           />
           ))}
         </div>
-        <button onClick={eventHandler}>Click me</button>
+        <button onClick={removeHandler}>Click me</button>
       </main >
       <footer copyright="hi" />
     </>
   );
 }
+//arrayFilter
 //()=>  binds the data of person name 
 //make a state which has array with three people
 //name={person.name} age={person.age} title={person.title} number={person.id}
-
-
-
-
-
-
-
-
-/*
-function App() {
-  const [count, setCount] = useState(0)
-
-
-  return (
-  <>
-    <div>
-      <a href="https://vitejs.dev" target="_blank">
-        <img src={viteLogo} className="logo" alt="Vite logo" />
-      </a>
-      <a href="https://react.dev" target="_blank">
-        <img src={reactLogo} className="logo react" alt="React logo" />
-      </a>
-    </div>
-    <h1>Vite + React</h1>
-    <div className="card">
-      <button onClick={() => setCount((count) => count + 1)}>
-        count is {count}
-      </button>
-      <p>
-        Edit <code>src/App.jsx</code> and save to test HMR
-      </p>
-    </div>
-    <p className="read-the-docs">
-      Click on the Vite and React logos to learn more
-    </p>
-  </>
-  )
-}
-*/
 export default App;
