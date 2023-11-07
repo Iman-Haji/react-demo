@@ -1,10 +1,9 @@
-const Card = ({ name, age, title, number }) => {
+const Card = ({ name, age, click }) => {
   return (
-    <div>
+    <div className="card">
       <h1>name: {name}</h1>
       <p>age: {age}</p>
-      <p>title: {title}</p>
-      <p>id: {number}</p>
+      <button onClick={click}></button>
     </div>
   );
 };

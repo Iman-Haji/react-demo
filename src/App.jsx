@@ -2,7 +2,7 @@ import { useState } from 'react';
 import Card from './Card.jsx';
 import Header from './Header.jsx';
 import Footer from './Footer.jsx';
-
+import image from './assets/panda.png';
 
 function App() {
   const [persons, setPersons] = useState([{ id: 0, name: 'Jane Doe', title: 'CEO', age: 21 },
@@ -10,21 +10,30 @@ function App() {
   { id: 2, name: 'Randy', title: 'Employee', age: 28 },
   ]);
 
+  const eventHandler = (name) => {
+    console.log(name);
+  }
   return (
     <>
       <header logo="iman haji" />
       <main>
         <h1>This is my application.</h1>
         <div className="cards">
-
           {persons.map((person) =>
-            (<Card key={person.id} {...person.id} />))};
+          (<Card
+            key={person.id}
+            {...person.id}
+            click={() => eventHandler(person.name)}
+          />
+          ))}
         </div>
+        <button onClick={eventHandler}>Click me</button>
       </main >
       <footer copyright="hi" />
     </>
   );
 }
+//()=>  binds the data of person name 
 //make a state which has array with three people
 //name={person.name} age={person.age} title={person.title} number={person.id}
 

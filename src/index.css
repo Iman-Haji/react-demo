@@ -30,25 +30,35 @@ a:hover {
 }
 
 body {
+  background-image: url('./assets/panda.png');
+  background-repeat: no-repeat;
   min-width: 320px;
   min-height: 100vh;
   text-align: center;
+  align-items: center;
+  background-size: cover;
 }
 
 button {
   border-radius: 8px;
+  width: 150px;
+  height: 80px;
   border: 1px solid transparent;
   padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
+  font-size: 1.5em;
+  font-weight: 900;
+  align-items: center;
+  text-align: center;
+  background-color: #9fdcaa;
+  color: #333;
   cursor: pointer;
   transition: border-color 0.25s;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 button:hover {
-  border-color: #646cff;
+  border-color: #10a248;
+
 }
 
 button:focus,
@@ -72,16 +82,25 @@ main {
 
 .cards {
   display: flex;
-  gap: 1rem;
+  gap: 20%;
   margin-top: 2rem;
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 1em;
+  font-size: 1.5em;
+  font-weight: 100;
+  font-family: inherit;
+  align-items: center;
+  text-align: center;
+  color: #333;
 }
 
 .card {
-  background-color: rgb(106, 75, 75);
+  background-color: rgb(240, 229, 229);
   padding: 1rem;
   border-radius: 5px;
   box-shadow: 0 0 5px #333;
-  color: pink;
+  color: rgb(21, 8, 8);
 }
 
 
