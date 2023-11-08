@@ -1,14 +1,13 @@
-const Card = ({ name, age, click }) => {
+const Card = ({ name, age, title, click }) => {
   return (
-    <div className="card">
-      <div style={age > 30 ? { background: "grey" } : { background: "pink" }} className="Card">
-      </div>
-
-
-
-      <h1>name: {name}</h1>
-      <p className={age > 30 ? "pink-age" : "red-age"}>age: {age}</p>
-      <button onClick={click}>.....</button>
+    <div
+      style={{ background: age > 30 ? "lightgrey" : "#663980" }}
+      className="card"
+    >
+      <h2>Name: {name}</h2>
+      <p>Title: {title}</p>
+      <p className={age > 30 ? "purple-age" : "blue-age"}>Age: {age}</p>
+      <button onClick={click}>Close</button>
     </div>
   );
 };

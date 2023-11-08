@@ -112,8 +112,8 @@ main {
   color: rgb(233, 191, 198);
 }
 
-.pink-age {
-  color: pink;
+.purple-age {
+  color: rgb(32, 20, 66);
   font-weight: 900;
 }
 
@@ -130,6 +130,7 @@ main {
 
   a:hover {
     color: #747bff;
+
   }
 
   button {
